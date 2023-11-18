@@ -7,6 +7,7 @@ namespace TestWork
     public partial class MainForm : Form
     {
         Random rnd = new Random();
+
         List<int> dataForSeria3 = new List<int>();
 
         public MainForm()
