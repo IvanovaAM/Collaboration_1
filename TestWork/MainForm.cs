@@ -32,7 +32,7 @@ namespace TestWork
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            CleanSeriasData();
+            CleanSeriesData();
             data.GenerateNewData();//генерация новых данных для отрисовки: серии 1 и 2 генерятся полностью с новыми зниачениями,
                                    //серия 3 удаляет первую точку и добавляет в конец новое значение
             FillSeriesData();
@@ -48,7 +48,7 @@ namespace TestWork
             chart1.Series.Invalidate();
         }
 
-        void CleanSeriasData()
+        void CleanSeriesData()
         {
             //очистка серий от данных
             foreach (var series in chart1.Series)
