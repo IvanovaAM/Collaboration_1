@@ -6,7 +6,7 @@ namespace TestWork
 {
     public partial class MainForm : Form
     {
-        CollectData data = new CollectData();
+        readonly CollectData data = new CollectData();
         public MainForm()
         {
             InitializeComponent();
