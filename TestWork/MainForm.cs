@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace TestWork
 {
     public partial class MainForm : Form
     {
-        readonly CollectData data = new CollectData();
+        CollectData data = new CollectData();
         public MainForm()
         {
             InitializeComponent();
