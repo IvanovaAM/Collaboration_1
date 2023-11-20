@@ -110,6 +110,7 @@ namespace TestWork
             chartArea2.AxisX.MaximumAutoSize = 70F;
             chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightBlue;
             chartArea2.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea2.AxisX.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea2.AxisX.ScaleView.SmallScrollMinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea2.AxisX.ScaleView.SmallScrollSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea2.AxisX.ScaleView.Zoomable = false;
@@ -133,6 +134,7 @@ namespace TestWork
             chartArea2.AxisY.MaximumAutoSize = 70F;
             chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightBlue;
             chartArea2.AxisY.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea2.AxisY.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea2.AxisY.ScaleView.SmallScrollMinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea2.AxisY.ScaleView.SmallScrollSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea2.AxisY.ScaleView.Zoomable = false;
@@ -162,6 +164,7 @@ namespace TestWork
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
             series1.Color = System.Drawing.Color.MidnightBlue;
             series1.IsVisibleInLegend = false;
+            series1.IsXValueIndexed = true;
             series1.Legend = "Legend1";
             series1.MarkerBorderColor = System.Drawing.Color.Green;
             series1.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -172,6 +175,7 @@ namespace TestWork
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series2.IsVisibleInLegend = false;
+            series2.IsXValueIndexed = true;
             series2.Legend = "Legend1";
             series2.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             series2.MarkerColor = System.Drawing.Color.Red;
@@ -183,13 +187,14 @@ namespace TestWork
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series3.IsValueShownAsLabel = true;
             series3.IsVisibleInLegend = false;
+            series3.IsXValueIndexed = true;
             series3.LabelForeColor = System.Drawing.Color.MidnightBlue;
             series3.Legend = "Legend1";
             series3.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series3.Name = "Series3";
             series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            series3.YValuesPerPoint = 2;
+            series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
             this.chart1.Series.Add(series3);
