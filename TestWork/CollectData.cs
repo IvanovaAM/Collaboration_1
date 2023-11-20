@@ -22,13 +22,13 @@ namespace TestWork
             var x1 = random.Next(-5, 5);
             var x2 = random.Next(11, 21);
             var y = random.Next(0, 5);
-            var seria = random.Next(2);
+            var seria = random.Next(2);//рандомный выбор серии - 0 или 1
 
             //для рандомного отображения серий 1 и 2 
             DataForSeria1 = (seria == 0) ? AddDataToList(x1, x2) : AddDataToList(x1, x2, y);
             DataForSeria2 = (seria == 1) ? AddDataToList(x1, x2) : AddDataToList(x1, x2, y);
 
-            if (first == 1)
+            if (first)
             {
                 DataForSeria3.RemoveAt(0);//удаление из листа первого значения
                 DataForSeria3.Add(StorageFunctions.GetData());//дабавление в конец листа одного нового значения
@@ -36,7 +36,9 @@ namespace TestWork
             else //генерация данных для серии3 при инициализации класса
             {
                 for (int i = 0; i < random.Next(5, 10); i++)
+                {                    
                     DataForSeria3.Add(StorageFunctions.GetData() + ((i + 1) * (i + 2))); //генерация первоначального количества данных для серии3
+                }
             }
         }
 
