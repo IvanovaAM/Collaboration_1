@@ -11,22 +11,21 @@ namespace TestWork
         /// </summary>
         [STAThread]
         static void Main()
-        {        
+        {
             _ = new Mutex(true, "TestWork", out bool onlyInstance);
 
-            if (onlyInstance)
-            {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MainForm());
-            }
-            else
+            if (!onlyInstance)
             {
                 MessageBox.Show(
                    "Приложение уже запущено!",
                    "TestWork",
                    MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
             }
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
         }
     }
 }
