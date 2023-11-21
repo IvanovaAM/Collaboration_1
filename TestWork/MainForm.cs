@@ -20,7 +20,7 @@ namespace TestWork
                           , true);
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void CloseButton_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -30,7 +30,7 @@ namespace TestWork
             FillSeriesData();
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
+        private void RedrawChartControl_Tick(object sender, EventArgs e)
         {
             CleanSeriesData();
             testData.GenerateNewData();
@@ -41,14 +41,14 @@ namespace TestWork
         {
             for (int i = 0; i < 3; i++)
             {
-                chart1.Series[i].Points.DataBindY(testData.ListWithData[i]);
+                chartControl.Series[i].Points.DataBindY(testData.ListWithData[i]);
             }
-            chart1.Series.Invalidate();
+            chartControl.Series.Invalidate();
         }
 
         void CleanSeriesData()
         {
-            foreach (var series in chart1.Series)
+            foreach (var series in chartControl.Series)
                 series.Points.Clear();
         }
     }
