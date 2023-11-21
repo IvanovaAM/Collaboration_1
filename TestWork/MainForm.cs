@@ -27,17 +27,17 @@ namespace TestWork
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            FillSeriesData();
+            FillSeriesOfPoints();
         }
 
         private void RedrawChartControl_Tick(object sender, EventArgs e)
         {
-            CleanSeriesData();
+            CleanSeriesOfPoints();
             testData.GenerateNewData();
-            FillSeriesData();
+            FillSeriesOfPoints();
         }
 
-        void FillSeriesData()
+        void FillSeriesOfPoints()
         {
             for (int i = 0; i < 3; i++)
             {
@@ -46,7 +46,7 @@ namespace TestWork
             chartControl.Series.Invalidate();
         }
 
-        void CleanSeriesData()
+        void CleanSeriesOfPoints()
         {
             foreach (var series in chartControl.Series)
                 series.Points.Clear();
