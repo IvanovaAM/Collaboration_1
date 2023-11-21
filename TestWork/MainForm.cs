@@ -39,17 +39,21 @@ namespace TestWork
 
         void FillSeriesOfPoints()
         {
-            for (int i = 0; i < 3; i++)
+            var i = 0;
+            foreach (var seriesOfPoints in chartControl.Series)
             {
-                chartControl.Series[i].Points.DataBindY(testData.ListWithData[i]);
+                seriesOfPoints.Points.DataBindY(testData.ListWithData[i]);
+                i++;
             }
             chartControl.Series.Invalidate();
         }
 
         void CleanSeriesOfPoints()
         {
-            foreach (var series in chartControl.Series)
-                series.Points.Clear();
+            foreach (var seriesOfPoints in chartControl.Series)
+            {
+                seriesOfPoints.Points.Clear();
+            }
         }
     }
 }
